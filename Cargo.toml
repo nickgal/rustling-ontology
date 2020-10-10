@@ -9,8 +9,7 @@ edition = "2018"
 members=[
     "cli",
     "cli-debug",
-    "grammar",
-    "grammar/de",
+    "grammar",W
     "grammar/en",
     "json-utils",
     "moment",
