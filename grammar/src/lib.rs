@@ -1,6 +1,5 @@
 extern crate rustling;
 extern crate rustling_ontology_values;
-extern crate rustling_ontology_de as de;
 extern crate rustling_ontology_en as en;
 
 use std::result;
@@ -42,12 +41,11 @@ macro_rules! lang_enum {
     }
 }
 
-lang_enum!([DE, EN]);
+lang_enum!([EN]);
 
 /// Obtain rules for a given language.
 pub fn rules(lang: Lang) -> ::rustling::RustlingResult<::rustling::RuleSet<rustling_ontology_values::Dimension>> {
     match lang {
-        Lang::DE => de::rule_set(),
         Lang::EN => en::rule_set(),
     }
 }
@@ -55,7 +53,6 @@ pub fn rules(lang: Lang) -> ::rustling::RustlingResult<::rustling::RuleSet<rustl
 /// Obtain dimensions for a given language.
 pub fn dims(lang: Lang) -> Vec<rustling_ontology_values::DimensionKind> {
     match lang {
-        Lang::DE => de::dims(),
         Lang::EN => en::dims(),
     }
 }
@@ -63,7 +60,6 @@ pub fn dims(lang: Lang) -> Vec<rustling_ontology_values::DimensionKind> {
 /// Obtain examples for a given language.
 pub fn examples(lang: Lang) -> Vec<::rustling::train::Example<rustling_ontology_values::Dimension>> {
     match lang {
-        Lang::DE => de::examples(),
         Lang::EN => en::examples(),
     }
 }
