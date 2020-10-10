@@ -132,9 +132,6 @@ pub fn build_parser(lang: Lang) -> RustlingResult<Parser> {
 pub fn build_raw_parser(lang: Lang) -> RustlingResult<RawParser> {
     let rules = grammar::rules(lang)?;
     let model = match lang {
-        Lang::DE => {
-            ::rmp_serde::decode::from_read(&include_bytes!(concat!(env!("OUT_DIR"), "/de.rmp"))[..])
-        }
         Lang::EN => {
             ::rmp_serde::decode::from_read(&include_bytes!(concat!(env!("OUT_DIR"), "/en.rmp"))[..])
         }
