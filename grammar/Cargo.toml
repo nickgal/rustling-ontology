@@ -6,6 +6,5 @@ edition = "2018"
 
 [dependencies]
 rustling = { git = "https://github.com/snipsco/rustling", tag = "0.9.1" }
-rustling-ontology-de = { path = "de" }
 rustling-ontology-en = { path = "en" }
 rustling-ontology-values = { path = "../values" }
