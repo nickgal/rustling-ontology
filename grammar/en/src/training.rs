@@ -61,7 +61,7 @@ pub fn examples_datetime(v: &mut Vec<::rustling::train::Example<Dimension>>) {
     example!(v, check_moment!(c, [2013, 2, 17]), "sunday", "sun", "sun.");
     example!(v, check_moment!(c, [2013, 3, 1]), "the 1st of march", "first of march", "march first");
     example!(v, check_moment!(c, [2013, 3, 3]), "march 3");
-    example!(v, check_moment!(c, [2013, 3, 15]), "the ides of march");
+    // example!(v, check_moment!(c, [2013, 3, 15]), "the ides of march");
     example!(v, check_moment!(c, [2015, 3, 3]), "march 3 2015", "march 3rd 2015", "march third 2015");
     example!(v, check_moment!(c, [2015, 3, 3]), "3/3/2015", "3/3/15", "2015-3-3", "2015-03-03");
     example!(v, check_moment!(c, [2015, 8, 31]), "31/08/2015", "31/08/15", "2015-08-31", "2015-08-31");
